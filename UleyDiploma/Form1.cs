@@ -41,5 +41,6 @@ namespace UleyDiploma
             mainPanel.Controls.Clear();
             mainPanel.Controls.Add(new Views.OrdersView() { Dock = DockStyle.Fill });
         }
+
     }
 }

@@ -26,5 +26,7 @@ namespace UleyDiploma.Data
         public bool application_visible { get; set; }
 
         public string preview { get; set; }
+
+        public int min_quantity { get; set;}
     }
 }
