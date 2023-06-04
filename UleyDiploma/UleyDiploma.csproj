@@ -81,6 +81,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="API\RestUleyAPI.cs" />
+    <Compile Include="Data\Catalogs.cs" />
+    <Compile Include="Data\DailySales.cs" />
     <Compile Include="Data\Products.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -98,11 +101,29 @@
     <Compile Include="Views\MainView.Designer.cs">
       <DependentUpon>MainView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\OrdersView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\OrdersView.Designer.cs">
+      <DependentUpon>OrdersView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\ProductsView.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Views\ProductsView.Designer.cs">
       <DependentUpon>ProductsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Products\addProductsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Products\addProductsView.Designer.cs">
+      <DependentUpon>addProductsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Products\dailysalesView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Products\dailysalesView.Designer.cs">
+      <DependentUpon>dailysalesView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Products\selectProductsView.cs">
       <SubType>UserControl</SubType>
@@ -126,8 +147,17 @@
     <EmbeddedResource Include="Views\MainView.resx">
       <DependentUpon>MainView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\OrdersView.resx">
+      <DependentUpon>OrdersView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\ProductsView.resx">
       <DependentUpon>ProductsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Products\addProductsView.resx">
+      <DependentUpon>addProductsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Products\dailysalesView.resx">
+      <DependentUpon>dailysalesView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Products\selectProductsView.resx">
       <DependentUpon>selectProductsView.cs</DependentUpon>
@@ -148,6 +178,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Main\" />
+    <Folder Include="Views\Orders\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo.png" />

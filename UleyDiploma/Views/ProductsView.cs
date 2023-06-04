@@ -22,5 +22,23 @@ namespace UleyDiploma.Views
             products_panel.Controls.Clear();
             products_panel.Controls.Add(new Views.Products.selectProductsView() { Dock = DockStyle.Fill });
         }
+
+        private void btn_addProducts_Click(object sender, EventArgs e)
+        {
+            products_panel.Controls.Clear();
+            products_panel.Controls.Add(new Views.Products.addProductsView() { Dock = DockStyle.Fill });
+        }
+
+        private void ProductsView_Load(object sender, EventArgs e)
+        {
+            products_panel.Controls.Clear();
+            products_panel.Controls.Add(new Views.Products.selectProductsView() { Dock = DockStyle.Fill });
+        }
+
+        private void btn_dailysales_Click(object sender, EventArgs e)
+        {
+            products_panel.Controls.Clear();
+            products_panel.Controls.Add(new Views.Products.dailysalesView() { Dock = DockStyle.Fill });
+        }
     }
 }

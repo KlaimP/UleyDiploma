@@ -23,16 +23,8 @@ namespace UleyDiploma.Views.Products
 
         private void selectProductsView_Load(object sender, EventArgs e)
         {
-            string url = "http://192.168.56.112:3000/rpc/get_products";
 
-            var client = new RestClient(url);
-            var request = new RestRequest();
-
-            var response = client.Get(request);
-
-            var result = JsonConvert.DeserializeObject<List<Data.Products>>(response.Content);
-
-            SortableBindingList<Data.Products> products = new SortableBindingList<Data.Products>(result);
+            SortableBindingList<Data.Products> products = new SortableBindingList<Data.Products>(API.RestUleyAPI.GetProducts());
 
             dataProducts.DataSource = products;
 

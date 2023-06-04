@@ -44,10 +44,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataProducts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataProducts.Location = new System.Drawing.Point(3, 45);
+            this.dataProducts.Location = new System.Drawing.Point(3, 33);
             this.dataProducts.Name = "dataProducts";
             this.dataProducts.ReadOnly = true;
-            this.dataProducts.Size = new System.Drawing.Size(968, 612);
+            this.dataProducts.Size = new System.Drawing.Size(968, 624);
             this.dataProducts.TabIndex = 0;
             this.dataProducts.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataProducts_CellClick);
             // 

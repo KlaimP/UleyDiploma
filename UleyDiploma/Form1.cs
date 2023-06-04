@@ -35,5 +35,11 @@ namespace UleyDiploma
             mainPanel.Controls.Clear();
             mainPanel.Controls.Add(new Views.MainView() { Dock = DockStyle.Fill });
         }
+
+        private void btn_orders_Click(object sender, EventArgs e)
+        {
+            mainPanel.Controls.Clear();
+            mainPanel.Controls.Add(new Views.OrdersView() { Dock = DockStyle.Fill });
+        }
     }
 }
