@@ -103,6 +103,7 @@
             this.btn_findProducts.TabIndex = 5;
             this.btn_findProducts.Text = "Поиск";
             this.btn_findProducts.UseVisualStyleBackColor = true;
+            this.btn_findProducts.Click += new System.EventHandler(this.btn_findProducts_Click);
             // 
             // textBox1
             // 
@@ -359,6 +360,7 @@
             // 
             // dateTimePicker_dailySales
             // 
+            this.dateTimePicker_dailySales.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.dateTimePicker_dailySales.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.dateTimePicker_dailySales.Location = new System.Drawing.Point(416, 552);
             this.dateTimePicker_dailySales.Name = "dateTimePicker_dailySales";
@@ -371,6 +373,9 @@
             this.dataGrid_dailysales.AllowUserToAddRows = false;
             this.dataGrid_dailysales.AllowUserToDeleteRows = false;
             this.dataGrid_dailysales.AllowUserToOrderColumns = true;
+            this.dataGrid_dailysales.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGrid_dailysales.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGrid_dailysales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGrid_dailysales.Location = new System.Drawing.Point(3, 3);
@@ -381,6 +386,7 @@
             // 
             // btn_right
             // 
+            this.btn_right.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_right.Location = new System.Drawing.Point(931, 542);
             this.btn_right.Name = "btn_right";
             this.btn_right.Size = new System.Drawing.Size(79, 48);
@@ -391,6 +397,7 @@
             // 
             // btn_left
             // 
+            this.btn_left.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_left.Location = new System.Drawing.Point(3, 542);
             this.btn_left.Name = "btn_left";
             this.btn_left.Size = new System.Drawing.Size(79, 48);

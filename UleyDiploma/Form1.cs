@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UleyDiploma.API;
+using UleyDiploma.Forms;
 
 namespace UleyDiploma
 {
@@ -32,8 +34,13 @@ namespace UleyDiploma
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            RestUleyAPI.log("Started application");
+            
             mainPanel.Controls.Clear();
             mainPanel.Controls.Add(new Views.MainView() { Dock = DockStyle.Fill });
+
+            Forms.Authorization authorization = new Forms.Authorization();
+            authorization.ShowDialog();
         }
 
         private void btn_orders_Click(object sender, EventArgs e)
@@ -42,5 +49,16 @@ namespace UleyDiploma
             mainPanel.Controls.Add(new Views.OrdersView() { Dock = DockStyle.Fill });
         }
 
+        private void menu_createOrders_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuAddProviders_Click(object sender, EventArgs e)
+        {
+            AddProviders form = new AddProviders();
+
+            form.Show();
+        }
     }
 }

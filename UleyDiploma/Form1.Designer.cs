@@ -35,9 +35,11 @@
             this.btn_products = new System.Windows.Forms.Button();
             this.btn_main = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.номеклатураToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.окнаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.функцииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu_createOrders = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuAddProviders = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -98,20 +100,14 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.файлToolStripMenuItem,
             this.номеклатураToolStripMenuItem,
-            this.окнаToolStripMenuItem});
+            this.окнаToolStripMenuItem,
+            this.функцииToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1264, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // файлToolStripMenuItem
-            // 
-            this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
-            this.файлToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
-            this.файлToolStripMenuItem.Text = "Файл";
             // 
             // номеклатураToolStripMenuItem
             // 
@@ -121,9 +117,33 @@
             // 
             // окнаToolStripMenuItem
             // 
+            this.окнаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuAddProviders});
             this.окнаToolStripMenuItem.Name = "окнаToolStripMenuItem";
             this.окнаToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
             this.окнаToolStripMenuItem.Text = "Окна";
+            // 
+            // функцииToolStripMenuItem
+            // 
+            this.функцииToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menu_createOrders});
+            this.функцииToolStripMenuItem.Name = "функцииToolStripMenuItem";
+            this.функцииToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
+            this.функцииToolStripMenuItem.Text = "Функции";
+            // 
+            // menu_createOrders
+            // 
+            this.menu_createOrders.Name = "menu_createOrders";
+            this.menu_createOrders.Size = new System.Drawing.Size(180, 22);
+            this.menu_createOrders.Text = "Создание заказов";
+            this.menu_createOrders.Click += new System.EventHandler(this.menu_createOrders_Click);
+            // 
+            // menuAddProviders
+            // 
+            this.menuAddProviders.Name = "menuAddProviders";
+            this.menuAddProviders.Size = new System.Drawing.Size(196, 22);
+            this.menuAddProviders.Text = "Добавить поставщика";
+            this.menuAddProviders.Click += new System.EventHandler(this.menuAddProviders_Click);
             // 
             // MainForm
             // 
@@ -155,9 +175,11 @@
         private System.Windows.Forms.Button btn_main;
         private System.Windows.Forms.Button btn_orders;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem файлToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem номеклатураToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem окнаToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem функцииToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menu_createOrders;
+        private System.Windows.Forms.ToolStripMenuItem menuAddProviders;
     }
 }
 

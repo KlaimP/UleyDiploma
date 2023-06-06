@@ -81,6 +81,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\OrdersCreate.cs" />
     <Compile Include="API\RestUleyAPI.cs" />
     <Compile Include="Data\Catalogs.cs" />
     <Compile Include="Data\DailySales.cs" />
@@ -90,6 +91,18 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddProviders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddProviders.Designer.cs">
+      <DependentUpon>AddProviders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Authorization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Authorization.Designer.cs">
+      <DependentUpon>Authorization.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -107,32 +120,32 @@
     <Compile Include="Views\OrdersView.Designer.cs">
       <DependentUpon>OrdersView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Orders\OrdersRow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Orders\OrdersRow.Designer.cs">
+      <DependentUpon>OrdersRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Orders\OrdersRowArrow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Orders\OrdersRowArrow.Designer.cs">
+      <DependentUpon>OrdersRowArrow.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\ProductsView.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Views\ProductsView.Designer.cs">
       <DependentUpon>ProductsView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Products\addProductsView.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Views\Products\addProductsView.Designer.cs">
-      <DependentUpon>addProductsView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Products\dailysalesView.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Views\Products\dailysalesView.Designer.cs">
-      <DependentUpon>dailysalesView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Products\selectProductsView.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Views\Products\selectProductsView.Designer.cs">
-      <DependentUpon>selectProductsView.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddProviders.resx">
+      <DependentUpon>AddProviders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Authorization.resx">
+      <DependentUpon>Authorization.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -150,17 +163,14 @@
     <EmbeddedResource Include="Views\OrdersView.resx">
       <DependentUpon>OrdersView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Orders\OrdersRow.resx">
+      <DependentUpon>OrdersRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Orders\OrdersRowArrow.resx">
+      <DependentUpon>OrdersRowArrow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\ProductsView.resx">
       <DependentUpon>ProductsView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Products\addProductsView.resx">
-      <DependentUpon>addProductsView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Products\dailysalesView.resx">
-      <DependentUpon>dailysalesView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Products\selectProductsView.resx">
-      <DependentUpon>selectProductsView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -178,7 +188,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Main\" />
-    <Folder Include="Views\Orders\" />
+    <Folder Include="Views\Products\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo.png" />

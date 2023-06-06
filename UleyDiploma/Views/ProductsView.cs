@@ -106,5 +106,10 @@ namespace UleyDiploma.Views
                 dataProducts.DataSource = products;
             }
         }
+
+        private void btn_findProducts_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

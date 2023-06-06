@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using UleyDiploma.Data;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace UleyDiploma.API
 {
@@ -81,6 +82,53 @@ namespace UleyDiploma.API
             var response = client.Get(request);
 
             var result = JsonConvert.DeserializeObject<List<Data.DailySales>>(response.Content);
+
+            return result;
+        }
+
+        public static bool log(string text)
+        {
+            try{
+                var client = new RestClient(url + "log");
+                var request = new RestRequest();
+
+                request.AddParameter("i_text", text);
+
+                var response = client.Post(request);
+
+                return Convert.ToBoolean(response.Content);
+            }
+            catch
+            {
+                DialogResult res = MessageBox.Show("Не удалось подключится к серверу. Если при повторном запуске ошибка не решена, обратитесь к системному администратору.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
+                Environment.Exit(0);
+
+                return false;
+            }
+        }
+        
+        public static string Verify(string login, string password)
+        {
+            var client = new RestClient(url + "work_accounts_verify");
+            var request = new RestRequest();
+
+            request.AddParameter("i_login", login);
+            request.AddParameter("i_password", password);
+
+            var response = client.Post(request);
+
+            return response.Content;
+        }
+
+        public static List<OrdersCreate> GetTemporaryOrder()
+        {
+            var client = new RestClient(url + "get_temporary_order");
+            var request = new RestRequest();
+
+            var response = client.Get(request);
+
+            var result = JsonConvert.DeserializeObject<List<Data.OrdersCreate>>(response.Content);
 
             return result;
         }
